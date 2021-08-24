@@ -1,0 +1,120 @@
+// USER VARIABLES SECTION
+
+$accent: orange // Accent Color
+$fontsize: 16px // Body Font Size
+$textcolor: #393939 // Text Color
+$lineheight: 17px // Document Line Height
+$userfont: Gotham-SC, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+$maxWidthContainer: 1290
+$maxWidth: 1290
+@mixin adaptiv-value($property, $startSize, $minSize, $type)
+	$addSize: $startSize - $minSize
+	@if $type==1
+		//Только если меньше контейнера
+		#{$property}: $startSize + px
+		@media (max-width: #{$maxWidthContainer + px})
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}))
+
+	@else if $type==2
+		//Только если больше контейнера
+		#{$property}: $startSize + px
+		@media (min-width: #{$maxWidthContainer + px})
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}))
+
+	@else
+		//Всегда
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}))
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import "node_modules/swiper/swiper-bundle"
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('Gotham-SC', normal, 100, '../fonts/GothamThin.woff2')
+@include font('Gotham-SC', normal, 200, '../fonts/GothamXLight.woff2')
+@include font('Gotham-SC', normal, 300, '../fonts/GothamLight.woff2')
+@include font('Gotham-SC', normal, 400, '../fonts/GothamBook.woff2')
+@include font('Gotham-SC', normal, 500, '../fonts/GothamMedium.woff2')
+@include font('Gotham-SC', normal, 600, '../fonts/GothamBold.woff2')
+@include font('Gotham-SC', normal, 700, '../fonts/GothamBlack.woff2')
+@include font('Gotham-SC', normal, 800, '../fonts/GothamUltra.woff2')
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $textcolor
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+	width: 100%
+	min-height: 100vh
+body._lock
+	overflow: hidden
+
+.wrapper
+	position: relative
+	display: flex
+	flex-direction: column
+	width: 100%
+	min-height: 100vh
+
+.page
+	position: relative
+	flex: 1 1 100%
+	section	
+		@include adaptiv-value("margin-bottom", 75, 30, 1)
+._container
+	margin: 0 auto
+	max-width: 1130px
+	padding: 0 5px
+
+.body-overlay
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: -10
+	transition: 0.3s ease-in-out
+	pointer-events: none
+	&._active
+		position: absolute
+		z-index: 10
+		@supports ((-webkit-backdrop-filter: blur(4px)) or (backdrop-filter:blur(4px)))
+			backdrop-filter: blur(4px)
+			pointer-events: inherit
+			transition: 0.3s ease-in-out

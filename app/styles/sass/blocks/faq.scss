@@ -1,0 +1,67 @@
+.spollers-block {
+	&__item {
+		border-bottom: 1px solid rgba($textcolor, 0.25);
+	}
+
+	// .spollers-block__title
+	
+	&__title {
+		@include adaptiv-value("font-size", 20, 20, 1);
+		@include adaptiv-value("line-height", 30, 30, 1);
+		font-weight: 400;
+		background-color: #ffffff;
+		cursor: pointer;
+		padding-right: 70px;
+		@include adaptiv-value("padding-top", 40, 25, 1);
+		@include adaptiv-value("padding-bottom", 40, 20, 1);
+		position: relative;
+		user-select: none;
+		transition: color 0.3s ease-in-out;
+		&:hover {
+			color: rgba($textcolor, 0.6);
+		}
+		&._active {
+			color: rgba($textcolor, 0.6);
+		}
+		&::before {
+			content: "";
+			width: 30px;
+			@include adaptiv-value("width", 30, 20, 1);
+			background-color: $textcolor;
+			height: 2px;
+			transition: transform 0.3s ease 0s;
+			transform: translate(0, -50%) rotate(0deg);
+			position: absolute;
+			right: 35px;
+			top: 50%;
+		}
+		&::after {
+			content: "";
+			width: 30px;
+			@include adaptiv-value("width", 30, 20, 1);
+			background-color: $textcolor;
+			height: 2px;
+			transition: transform 0.3s ease 0s;
+			transform: translate(0, -50%) rotate(90deg);
+			position: absolute;
+			right: 35px;
+			top: 50%;
+		}
+		&._active {
+			&::before {
+				transform: translate(0, -50%) rotate(45deg);
+			}
+			&::after {
+				transform: translate(0, -50%) rotate(-45deg);
+			}
+		}
+	}
+	// .spollers-block__body
+	&__body {
+		@include adaptiv-value("font-size", 15, 15, 1);
+		@include adaptiv-value("line-height", 21, 21, 1);
+		font-weight: 400;
+		display: none;
+		padding: 0px 0px 50px 0px;
+	}
+}

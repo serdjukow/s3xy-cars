@@ -1,0 +1,168 @@
+.select {
+	position: relative;
+}
+.select__item {
+	position: relative;
+	width: auto;
+	user-select: none;
+}
+.select__title {
+	color: $textcolor;
+	background-color: #fff;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.select__value {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 5px;
+	font-size: 15px;
+	line-height: 22px;
+	font-weight: 400;
+	text-align: center;
+	border-radius: 4px;
+	cursor: pointer;
+	border: 1px solid rgba(#393939, 0.25);
+	min-width: 160px;
+	user-select: none;
+	margin-bottom: 10px;
+	transition: 0.3s ease-in-out;
+	background-color: lighten($color: $textcolor, $amount: 0%);
+	color: #fff;
+	&._active {
+		background-color: $textcolor;
+		color: #fff;
+	}
+	@include media-breakpoint-up(xl) {
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: lighten($color: $textcolor, $amount: 30%);
+				color: #fff;
+			}
+		}
+	}
+
+}
+.select__value span {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+.select__value::before {
+	content: "";
+	display: inline-block;
+	transition: all 0.3s ease 0s;
+	width: 11px;
+	height: 7px;
+	background: url("./../images/dist/select.svg") center / 100% no-repeat;
+}
+.select__options {
+	display: none;
+	border-top: 0;
+	border-top: 0;
+	font-size: 15px;
+	line-height: 22px;
+	font-weight: 400;
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
+	background-color: #fff !important;
+	@include media-breakpoint-up(xl) {
+		display: flex !important;
+		
+	}
+	@include media-breakpoint-down(xl) {
+		position: absolute;
+		top:50px;
+		left: 0;
+		right: 0;
+	}
+}
+
+.select__option-in {
+	justify-content: center;
+	align-items: center;	
+	font-size: 15px;
+	line-height: 22px;
+	font-weight: 400;
+	text-align: center;
+	border-radius: 4px;
+	padding: 10px 5px;
+	cursor: pointer;
+	border: 1px solid rgba(#393939, 0.25);
+	margin-bottom: 20px;
+	min-width: 160px;
+	user-select: none;
+	transition: 0.3s ease-in-out;
+	@include adaptiv-value("min-width", 160, 90, 1);
+	&._active {
+		background-color: $textcolor;
+		color: #fff;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: lighten($color: $textcolor, $amount: 30%);
+			color: #fff;
+		}
+	}
+	&:not(:last-child) {
+		margin-right: 10px;
+	}
+}
+.select._active {
+	z-index: 5;
+}
+.select._active .select__value::before {
+	transform: rotate(-180deg);
+}
+.select._active.select__options {
+	display: block;
+}
+
+@include media-breakpoint-up(xxl) {
+	.accessories__nav-select {
+		.select {
+			min-height: 100px;
+			// .select__item
+
+			&__item {
+			}
+
+			// .select__title
+
+			&__title {
+			}
+
+			// .select__value
+
+			&__value {
+			}
+
+			// .select__options
+
+			&__options {
+				//display:flex !important;
+			}
+
+			// .select__option-in
+
+			&__option-in {
+			}
+		}
+		.select_form {
+			// .select_form__select
+
+			&__select {
+			}
+		}
+		.form {
+			// .form__select
+
+			&__select {
+				display: none;
+			}
+		}
+	}
+}
