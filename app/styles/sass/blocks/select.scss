@@ -42,7 +42,6 @@
 			}
 		}
 	}
-
 }
 .select__value span {
 	overflow: hidden;
@@ -71,11 +70,10 @@
 	background-color: #fff !important;
 	@include media-breakpoint-up(xl) {
 		display: flex !important;
-		
 	}
 	@include media-breakpoint-down(xl) {
 		position: absolute;
-		top:50px;
+		top: 50px;
 		left: 0;
 		right: 0;
 	}
@@ -83,7 +81,7 @@
 
 .select__option-in {
 	justify-content: center;
-	align-items: center;	
+	align-items: center;
 	font-size: 15px;
 	line-height: 22px;
 	font-weight: 400;
@@ -125,37 +123,6 @@
 	.accessories__nav-select {
 		.select {
 			min-height: 100px;
-			// .select__item
-
-			&__item {
-			}
-
-			// .select__title
-
-			&__title {
-			}
-
-			// .select__value
-
-			&__value {
-			}
-
-			// .select__options
-
-			&__options {
-				//display:flex !important;
-			}
-
-			// .select__option-in
-
-			&__option-in {
-			}
-		}
-		.select_form {
-			// .select_form__select
-
-			&__select {
-			}
 		}
 		.form {
 			// .form__select
