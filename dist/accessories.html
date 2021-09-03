@@ -14,6 +14,7 @@
 
 	<link rel="icon" href="images/favicon.png">
 	<link rel="stylesheet" href="css/main.min.css">
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -31,11 +32,11 @@
 						<li class="navigation__li">
 							<a href="#" class="navigation__link button-go-to" data-goto=".news">Новости</a>
 						</li>
-						<li class="navigation__li">
-							<a href="accessories.html" class="navigation__link">Аксессуары</a>
+						<li class="navigation__li  current-menu-item">
+							<a href="accessories.html" class="navigation__link ">Аксессуары</a>
 						</li>
 						<li class="navigation__li">
-							<a href="#" class="navigation__link">Сервис</a>
+							<a href="service.html" class="navigation__link">Сервис</a>
 						</li>
 						<li class="navigation__li">
 							<a href="#" class="navigation__link">.Lab</a>
@@ -90,7 +91,8 @@
 			<div class="accessories__body">
 				<a href="accessories-details.html" class="accessories__card card">
 					<div class="card__img">
-						<img src="./images/dist/accessoires/1.png" alt="">
+						<img src="http://s3xycars.ru/wp-content/uploads/2021/08/people_4_windbreaker_facescreen_front_black_500-335x290.jpg"
+							alt="">
 					</div>
 					<div class="card__info">
 						<div class="card__title">
@@ -110,7 +112,7 @@
 
 				<a href="accessories-details.html" class="accessories__card card">
 					<div class="card__img">
-						<img src="./images/dist/accessoires/2.png" alt="">
+						<img src="http://s3xycars.ru/wp-content/uploads/2021/08/Ej1eDcUUYAAPhsb-768x1024.jpg" alt="">
 					</div>
 					<div class="card__info">
 						<div class="card__title">
@@ -175,6 +177,53 @@
 </main>
 <footer class="footer">
 	<div class="footer__row _container">
+		<nav class="footer__models-menu menu-models">
+			<div class="menu-models__title">
+				Модели
+			</div>
+			<ul class="menu-models__list">
+				<li class="menu-models__item">
+					<a href="model-s.html" class="menu-models__link">
+						Model S
+					</a>
+				</li>
+				<li class="menu-models__item">
+					<a href="model-3.html" class="menu-models__link">
+						Model 3
+					</a>
+				</li>
+				<li class="menu-models__item">
+					<a href="model-x.html" class="menu-models__link">
+						Model X
+					</a>
+				</li>
+				<li class="menu-models__item">
+					<a href="model-y.html" class="menu-models__link">
+						Model Y
+					</a>
+				</li>
+				<li class="menu-models__item">
+					<a href="#" class="menu-models__link">
+						Model C
+					</a>
+				</li>
+				<li class="menu-models__item">
+					<a href="#" class="menu-models__link">
+						Model A
+					</a>
+				</li>
+				<li class="menu-models__item">
+					<a href="#" class="menu-models__link">
+						Model R
+					</a>
+				</li>
+				<li class="menu-models__item">
+					<a href="#" class="menu-models__link">
+						Model S
+					</a>
+				</li>
+			</ul>
+		</nav>
 		<div class="footer__contacts">
 			<div class="footer__contacts-title">
 				Контакты
@@ -182,15 +231,17 @@
 			<a class="footer__contacts-link" href="tel:+79999999999">+7 (999) 999-99-99</a>
 			<a class="footer__contacts-link" href="mailto:example@gmail.com">example@gmail.com</a>
 		</div>
+	</div>
+	<div class="footer__row _container">
 		<div class="footer__copyright">Все права защищены (с) 2021</div>
 	</div>
-	
+
 </footer>
 
 <div class="body-overlay"></div>
 </div>
 <script src="js/app.min.js"></script>
-
+<script src="js/moduls-jquery.js"></script>
 </body>
 
 </html>

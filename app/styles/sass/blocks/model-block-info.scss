@@ -1,0 +1,46 @@
+.model-info-block {
+
+	// .model-info-block__row
+
+	&__row {
+		height: calc(100vh - 75px);
+	}
+
+	// .model-info-block__photo
+
+	&__photo {
+		position: relative;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		min-height: 100%;		
+	}
+
+	// .model-info-block__container
+
+	&__container {
+	}
+
+	// .model-info-block__info
+
+	&__info {
+		background-color: #fff;
+	}
+
+	// .model-info-block__title
+
+	&__title {
+	}
+}
+.block-details {
+
+	// .block-details__title
+
+	&__title {
+	}
+
+	// .block-details__info
+
+	&__info {
+	}
+}

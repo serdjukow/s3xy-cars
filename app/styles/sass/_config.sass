@@ -52,7 +52,9 @@ $gutter: $grid-gutter-width
 @include font('Gotham-SC', normal, 200, '../fonts/GothamXLight.woff2')
 @include font('Gotham-SC', normal, 300, '../fonts/GothamLight.woff2')
 @include font('Gotham-SC', normal, 400, '../fonts/GothamBook.woff2')
+@include font('Gotham-SC', italic, 400, '../fonts/GothamBookItalic.woff2')
 @include font('Gotham-SC', normal, 500, '../fonts/GothamMedium.woff2')
+@include font('Gotham-SC', italic, 500, '../fonts/GothamMediumItalic.woff2')
 @include font('Gotham-SC', normal, 600, '../fonts/GothamBold.woff2')
 @include font('Gotham-SC', normal, 700, '../fonts/GothamBlack.woff2')
 @include font('Gotham-SC', normal, 800, '../fonts/GothamUltra.woff2')
@@ -96,12 +98,32 @@ body._lock
 .page
 	position: relative
 	flex: 1 1 100%
-	section	
+	section
 		@include adaptiv-value("margin-bottom", 75, 30, 1)
+.model-page
+	position: relative
+	section
+		margin-bottom: 0
+
+.model-page.scroll
+	width: 100%
+	max-height: calc(100vh - 75px)
+	overflow-y: scroll
+	scroll-snap-type: y mandatory
+	section
+		position: relative
+		width: 100%
+		height: 100%
+		scroll-snap-align: start
+
 ._container
 	margin: 0 auto
 	max-width: 1130px
 	padding: 0 5px
+
+._container-page
+	margin: 0 auto
+	max-width: 1230
 
 .body-overlay
 	top: 0

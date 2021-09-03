@@ -73,10 +73,7 @@ function styles() {
 function images() {
 	return src(['app/images/src/**/*'])
 		.pipe(newer('app/images/dist'))
-		.pipe(imagemin([
-			imagemin.mozjpeg({ quality: 75, progressive: true }),
-			imagemin.optipng({ optimizationLevel: 5 }),
-		]))
+		.pipe(imagemin())
 		.pipe(dest('app/images/dist'))
 		.pipe(browserSync.stream())
 }

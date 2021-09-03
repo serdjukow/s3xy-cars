@@ -186,6 +186,7 @@
 		cursor: pointer;
 		transition: 0.3s ease-in-out;
 		padding: 5px 5px 15px;
+		max-width: 175px;
 		@media (any-hover: hover) {
 			&:hover {
 				border: 1px solid rgba(#393939, 0.25);

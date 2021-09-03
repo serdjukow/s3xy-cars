@@ -59,11 +59,12 @@
 .accessories {
 	margin-bottom: 170px;
 	&__nav {
-		display: flex;
-		flex-wrap: nowrap;
-		justify-content: space-between;
 		margin-bottom: 37px;
-		overflow-x: auto;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+		column-gap: 20px;
+		row-gap: 10px;
+		width: 100%;
 	}
 
 	// .accessories__item
@@ -77,7 +78,6 @@
 		padding: 5px 5px;
 		cursor: pointer;
 		border: 1px solid rgba(#393939, 0.25);
-		margin-bottom: 20px;
 		user-select: none;
 		transition: 0.3s ease-in-out;
 		@include adaptiv-value("min-width", 130, 90, 1);
@@ -91,9 +91,6 @@
 				color: #fff;
 			}
 		}
-		&:not(:last-child) {
-			margin-right: 10px;
-		}
 	}
 
 	// .accessories__body
@@ -105,7 +102,7 @@
 		position: relative;
 		@include adaptiv-value("column-gap", 20, 15, 1);
 		@include adaptiv-value("row-gap", 35, 20, 1);
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 		z-index: 0;
 	}
 }
@@ -118,6 +115,7 @@
 	transition: box-shadow 0.3s ease-in-out;
 	background-color: #fff;
 	box-shadow: rgb(0 0 0 / 6%) 0 2px 8px;
+	max-width: 360px;
 	@media (any-hover: hover) {
 		&:hover {
 			box-shadow: rgb(0 0 0 / 16%) 0 2px 8px;
@@ -130,6 +128,7 @@
 		position: relative;
 		user-select: none;
 		padding-bottom: 93.61111111111111%;
+		overflow: hidden;
 		img {
 			position: absolute;
 			left: 0;
@@ -146,6 +145,7 @@
 	&__info {
 		position: relative;
 		margin-top: -19px;
+		background-color: #fff;
 	}
 
 	// .card__title

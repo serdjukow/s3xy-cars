@@ -14,6 +14,7 @@
 
 	<link rel="icon" href="images/favicon.png">
 	<link rel="stylesheet" href="css/main.min.css">
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -31,11 +32,11 @@
 						<li class="navigation__li">
 							<a href="#" class="navigation__link button-go-to" data-goto=".news">Новости</a>
 						</li>
-						<li class="navigation__li">
-							<a href="accessories.html" class="navigation__link">Аксессуары</a>
+						<li class="navigation__li  current-menu-item">
+							<a href="accessories.html" class="navigation__link ">Аксессуары</a>
 						</li>
 						<li class="navigation__li">
-							<a href="#" class="navigation__link">Сервис</a>
+							<a href="service.html" class="navigation__link">Сервис</a>
 						</li>
 						<li class="navigation__li">
 							<a href="#" class="navigation__link">.Lab</a>
@@ -67,13 +68,694 @@
 				</div>
 			</div>
 		</header>
-<main class="page">
-	<div class="_container">
-		<h1>Model X</h1>
-	</div>
+<main class="page model-page">
+
+	<section class="model-banner-top">
+		<div class="model-banner-top__row banner-top-bg"
+			style="background-image: url(./images/dist/models/model-x/top-bg.jpg);">
+			<div class="model-banner-top__title">
+				<h2>
+					Model X
+				</h2>
+				<span>Plaid</span>
+			</div>
+
+			<div class="model-banner-top__items-conteiner">
+				<div class="model-banner-top__items">
+
+					<div class="model-banner-top__item item-details">
+						<div class="item-details__title">
+							<span>637 км</span>
+						</div>
+						<div class="item-details__info">
+							<span>Запас хода</span>
+						</div>
+					</div>
+
+					<div class="model-banner-top__item item-details">
+						<div class="item-details__title">
+							<span>2.1 сек</span>
+						</div>
+						<div class="item-details__info">
+							<span>0-100 км/ч</span>
+						</div>
+					</div>
+
+					<div class="model-banner-top__item item-details">
+						<div class="item-details__title">
+							<span>322 км/ч</span>
+						</div>
+						<div class="item-details__info">
+							<span>Максимальная скорость</span>
+						</div>
+					</div>
+
+					<div class="model-banner-top__item item-details">
+						<div class="item-details__title">
+							<span>1020 л.с.</span>
+						</div>
+						<div class="item-details__info">
+							<span>Постоянная мощность</span>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="model-banner-top__button">
+					КУПИТЬ
+				</a>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="model-banner">
+		<div class="model-banner__header banner-bg banner-full"
+			style="background-image: url(./images/dist/models/model-x/banner-x-1.jpg);">
+		</div>
+	</section>
+
+	<section class="block-tiles">
+		<div class="block-tiles__row">
+			<div class="block-tiles__items">
+				<div class="block-tiles__item tiles-item">
+					<div class="tiles-item__content">
+						<div class="tiles-item__title">
+							<h3>17” Дисплей</h3>
+						</div>
+						<div class="tiles-item__text">
+							<p>Благодаря разрешению 2200x1300, сверхъярким, правдивым цветам и исключительной
+								отзывчивости новый центральный дисплей - это лучший экран для просмотра мультимедиа и
+								управлением автомобилем.</p>
+						</div>
+					</div>
+					<div class="tiles-item__photo">
+						<img src="./images/dist/models/model-s/tiles-1.jpg" alt="">
+					</div>
+				</div>
+
+				<div class="block-tiles__item tiles-item">
+					<div class="tiles-item__content">
+						<div class="tiles-item__title">
+							<h3>Спортивный штурвал</h3>
+						</div>
+						<div class="tiles-item__text">
+							<p>Максимальная сосредоточенность на вождении: никаких реле, никаких переключений.
+								Model X - это лучший автомобиль для вождения и лучший автомобиль для того, чтобы в нем
+								ездили.
+								Почувствуйте себя в кокпите сверхзвукового истребителя - во всех смыслах!</p>
+						</div>
+					</div>
+					<div class="tiles-item__photo">
+						<img src="./images/dist/models/model-s/tiles-2.jpg" alt="">
+					</div>
+				</div>
+				<div class="block-tiles__item tiles-item">
+					<div class="tiles-item__content">
+						<div class="tiles-item__title">
+							<h3>Просторный салон</h3>
+						</div>
+						<div class="tiles-item__text">
+							<p>Model X обладает просторным салоном с самым большим в мире панорамным лобовым стеклом, а
+								также возможностью выбора 5, 6 или 7-местной конфигурации в соответствии с вашим образом
+								жизни.</p>
+						</div>
+					</div>
+					<div class="tiles-item__photo">
+						<img src="./images/dist/models/model-s/tiles-3.jpg" alt="">
+					</div>
+				</div>
+				<div class="block-tiles__item tiles-item">
+					<div class="tiles-item__content">
+						<div class="tiles-item__title">
+							<h3>Лучшая аудиосистема</h3>
+						</div>
+						<div class="tiles-item__text">
+							<p>Разработанная “с нуля” инженерами из Bang&Olufsen, аудиосистема с 22 динамиками и
+								мощностью 960Вт с активным шумоподавлением обеспечивает наилучшие впечатления от
+								прослушивания любых композиций.
+								Эта аудиосистема - один из многих “скрытых сюрпризов” Tesla и поистине лучшая по
+								качеству среди всех автопроизводителей.</p>
+						</div>
+					</div>
+					<div class="tiles-item__photo">
+						<img src="./images/dist/models/model-s/tiles-4.jpg" alt="">
+					</div>
+				</div>
+				<div class="block-tiles__item tiles-item">
+					<div class="tiles-item__content">
+						<div class="tiles-item__title">
+							<h3>Невероятная вместительность</h3>
+						</div>
+						<div class="tiles-item__text">
+							<p>Благодаря переднему и заднему багажникам и складывающимся сиденьям, Model X - это
+								роскошный автомобиль, в который можно поместить велосипед, не снимая колеса, а также
+								багаж.</p>
+						</div>
+					</div>
+					<div class="tiles-item__photo">
+						<img src="./images/dist/models/model-s/tiles-6.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="model-banner">
+		<div class="model-banner__header banner-bg"
+			style="background-image: url(./images/dist/models/model-x/banner-2.jpg);">
+			<div class="model-banner__items">
+				<div class="item-details">
+					<div class="item-details__title">
+						<span>1020 л.с.</span>
+					</div>
+					<div class="item-details__info">
+						<span>Постоянная мощность</span>
+					</div>
+				</div>
+
+				<div class="item-details">
+					<div class="item-details__title">
+						<span>9.9 сек</span>
+					</div>
+					<div class="item-details__info">
+						<span>@250 км/ч 1/4 мили</span>
+					</div>
+				</div>
+
+				<div class="item-details">
+					<div class="item-details__title">
+						<span>2.6 сек</span>
+					</div>
+					<div class="item-details__info">
+						<span>0 - 100 км/ч</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="model-banner__footer">
+			<div class="model-banner__title">
+				<h3>
+					За гранью возможного
+				</h3>
+			</div>
+
+			<div class="model-banner__info">
+				<p>Обладая наибольшей мощностью и самым быстрым ускорением среди всех внедорожников, Model X Plaid
+					является самым высокопроизводительным внедорожником из когда-либо созданных. Оба силовых агрегата -
+					Long Range и Plaid - с обновленной архитектурой аккумуляторов способны обеспечить мгновенный
+					крутящий момент на любой скорости.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="model-banner transmission">
+		<div class="transmission__row">
+			<div class="transmission__top">
+				<div class="model-banner__title">
+					<h3>
+						Электрическая трансмиссия
+					</h3>
+				</div>
+				<div class="model-banner__info">
+					<p>
+						Платформы Long Range и Plaid объединяют технологии силовых агрегатов и батарей, обеспечивая
+						непревзойденную производительность, дальность и эффективность. Новая тепловая архитектура
+						модулей и блоков позволяет ускорить зарядку и обеспечивает большую мощность и выносливость в
+						любых условиях.
+					</p>
+				</div>
+			</div>
+			<div class="transmission__bg banner-bg"
+				style="background-image: url(./images/dist/models/model-s/transmission.jpg);">
+			</div>
+			<div class="transmission__footer">
+				<div class="transmission__column">
+					<div class="transmission__column-title">
+						<h5>Long Range</h5>
+					</div>
+					<div class="transmission__column-info">
+						<p>Платформа полного привода с двумя двигателями обеспечивает наибольшую дальность хода и теперь
+							обеспечивает невероятную мощность и ускорение</p>
+					</div>
+					<div class="transmission__column-items">
+						<div class="item-details">
+							<div class="item-details__title">
+								<span>3,9 сек</span>
+							</div>
+							<div class="item-details__info">
+								<span>0-100 км/ч</span>
+							</div>
+						</div>
+
+						<div class="item-details">
+							<div class="item-details__title">
+								<span>580 км</span>
+							</div>
+							<div class="item-details__info">
+								<span>Запас хода</span>
+							</div>
+						</div>
+
+						<div class="item-details">
+							<div class="item-details__title">
+								<span>670 л.с.</span>
+							</div>
+							<div class="item-details__info">
+								<span>Пиковая мощность</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="transmission__column">
+					<div class="transmission__column-title">
+						<h5>Plaid</h5>
+					</div>
+					<div class="transmission__column-info">
+						<p>Трехмоторная платформа полного привода с динамическим распределением крутящего момента на
+							каждое колесо оснащена тремя независимыми двигателями, каждый из которых имеет ротор с
+							карбоновыми рукавами, поддерживающий пиковую мощность вплоть до максимальной скорости.</p>
+					</div>
+					<div class="transmission__column-items">
+						<div class="item-details">
+							<div class="item-details__title">
+								<span>2,6 сек</span>
+							</div>
+							<div class="item-details__info">
+								<span>0-100 км/ч</span>
+							</div>
+						</div>
+
+						<div class="item-details">
+							<div class="item-details__title">
+								<span>547 км</span>
+							</div>
+							<div class="item-details__info">
+								<span>Запас хода</span>
+							</div>
+						</div>
+
+						<div class="item-details">
+							<div class="item-details__title">
+								<span>1,020 л.с.</span>
+							</div>
+							<div class="item-details__info">
+								<span>Пиковая мощность</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="model-banner">
+		<div class="model-banner__header banner-bg"
+			style="background-image: url(./images/dist/models/model-3/banner-2.jpg);">
+			<div class="model-banner__items">
+				<div class="item-details center">
+					<div class="item-details__title">
+						<span>2 577</span>
+					</div>
+					<div class="item-details__info">
+						<span>Вместимость салона</span>
+					</div>
+				</div>
+
+				<div class="item-details center">
+					<div class="item-details__title">
+						<span>2 268 кг</span>
+					</div>
+					<div class="item-details__info">
+						<span>Буксировочная мощность</span>
+					</div>
+				</div>
+
+				<div class="item-details center">
+					<div class="item-details__title">
+						<div class="item-details__icon">
+							<img src="./images/dist/icons/MX-Falcon-Wings-Badge.png" alt="">
+						</div>
+					</div>
+
+					<div class="item-details__info">
+						<span>Двери Falcon Wing</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="model-banner__footer">
+			<div class="model-banner__title">
+				<h3>
+					За гранью возможного
+				</h3>
+			</div>
+
+			<div class="model-banner__info">
+				<p>Model X обладает наибольшей вместительностью и тяговыми возможностями среди всех электрических
+					внедорожников и вмещает до семи взрослых, обеспечивая максимальную практичность. Передние двери
+					открываются и закрываются автоматически, двери Falcon Wing облегчают погрузку, а стандартное сцепное
+					устройство для прицепа позволяет взять с собой снаряжение куда угодно.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="model-banner">
+		<div class="model-banner__header banner-bg"
+			style="background-image: url(./images/dist/models/model-x/banner-3.jpg);">
+			<div class="model-banner__items">
+				<div class="item-details">
+					<div class="item-details__title">
+
+					</div>
+					<div class="item-details__info">
+						<span>Обновленная подвеска и управление</span>
+					</div>
+				</div>
+
+				<div class="item-details">
+					<div class="item-details__title">
+						<span>0.24</span><span class="italic">Cd</span>
+					</div>
+					<div class="item-details__info">
+						<span>Лучшая аэродинамика в классе</span>
+					</div>
+				</div>
+
+				<div class="item-details">
+					<div class="item-details__title">
+
+					</div>
+					<div class="item-details__info">
+						<span>Спортивный дизайн</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="model-banner__footer">
+			<div class="model-banner__title">
+				<h3>
+					Эффективный дизайн
+				</h3>
+			</div>
+
+			<div class="model-banner__info">
+				<p>Обладая самым низким на Земле коэффициентом аэродинамического сопротивления среди всех внедорожников,
+					Model X создан для скорости и дальних поездок. Усовершенствованные аэродинамические элементы в
+					сочетании с новыми колесами и шинами помогают преодолевать большие расстояния, улучшая управляемость
+					и повышая комфорт езды.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="model-banner">
+		<div class="model-banner__header banner-bg"
+			style="background-image: url(./images/dist/models/model-s/banner-autopilot.jpg);">
+			<div class="model-banner__items horizontal">
+				<div class="item-details">
+					<div class="item-details__title">
+						<span>360°</span>
+					</div>
+					<div class="item-details__info">
+						<span> Задние, боковые и направленные вперед камеры обеспечивают максимальную видимость</span>
+					</div>
+				</div>
+
+				<div class="item-details">
+					<div class="item-details__title">
+						<span>250м</span>
+					</div>
+					<div class="item-details__info">
+						<span>Мощная визуальная обработка на расстоянии до 250 метров</span>
+					</div>
+				</div>
+
+				<div class="item-details">
+					<div class="item-details__title">
+						<span>12 ультразвуковых сенсоров</span>
+					</div>
+					<div class="item-details__info">
+						<span> Обнаруживают соседние автомобили, предотвращают возможные столкновения и помогают при
+							парковке</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="model-banner__footer">
+			<div class="model-banner__title">
+				<h3>
+					Автопилот
+				</h3>
+			</div>
+
+			<div class="model-banner__info">
+				<p>
+					Автопилот - это визитная карточка всех автомобилей Tesla. Передовые функции безопасности и удобства
+					Автопилота призваны помочь водителю справиться с самыми обременительными ситуациями в вождении.
+					Более подробную информации об Автопилоте, его принципе действия и том, почему эта разработка Tesla
+					поистине недосягама для всех остальных автопроизводителей, читайте в разделе .Lab нашего сайта.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="safety">
+		<div class="safety__columns">
+			<div class="safety__column safety-info">
+				<div class="safety__title">
+					<h3>Безопасность</h3>
+				</div>
+				<div class="safety__text">
+					<p>Model X создан “с нуля” как электромобиль, с высокопрочной архитектурой и установленным на полу
+						блоком батарей, что обеспечивает невероятную защиту пассажиров и низкий риск опрокидывания.
+						Каждая Model X включает в себя новейшие функции активной безопасности Tesla, такие как
+						автоматическое экстренное торможение и многие другие - без дополнительной платы.</p>
+				</div>
+			</div>
+			<div class="safety__column safety-photo">
+				<div class="safety-photo__container">
+					<img src="./images/dist/models/model-x/safety.jpg" alt="">
+
+					<div class="safety__item item-left-center">
+						<span>Защита от фронтального удара</span>
+					</div>
+					<div class="safety__item item-top-center">
+						<span>Жесткий каркас кузова</span>
+					</div>
+					<div class="safety__item item-bottom-center">
+						<span>Минимальный риск переворачивания</span>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="specification">
+		<div class="specification__row">
+			<div class="specification__column column-bg">
+				<img src="./images/dist/models/model-x/specification-bg.jpg" alt="">
+			</div>
+
+			<div class="specification__column column-information">
+				<h2 class="column-information__title">
+					Спецификации
+				</h2>
+				<div class="column-information__items ">
+
+					<div class="column-information__item">
+						<div class="column-information__item-title">
+							<h3>Разгон 0 - 100 км/ч</h3>
+						</div>
+						<div class="column-information__item-info">
+							<span class="column-information__item-info-type">
+								Long Range
+							</span>
+							<span class="column-information__item-info-value">
+								3.9 сек
+							</span>
+						</div>
+						<div class="column-information__item-info">
+							<span class="column-information__item-info-type">
+								Plaid
+							</span>
+							<span class="column-information__item-info-value">
+								2.6 сек
+							</span>
+						</div>
+					</div>
+
+					<div class="column-information__item">
+						<div class="column-information__item-title">
+							<h3>Запас хода</h3>
+						</div>
+						<div class="column-information__item-info">
+							<span class="column-information__item-info-type">
+								Long Range
+							</span>
+							<span class="column-information__item-info-value">
+								580 км
+							</span>
+						</div>
+						<div class="column-information__item-info">
+							<span class="column-information__item-info-type">
+								Plaid
+							</span>
+							<span class="column-information__item-info-value">
+								547 км
+							</span>
+						</div>
+					</div>
+
+					<div class="column-information__item">
+						<div class="column-information__item-title">
+							<h3>Максимальная скорость</h3>
+						</div>
+						<div class="column-information__item-info">
+							<span class="column-information__item-info-type">
+								Long Range
+							</span>
+							<span class="column-information__item-info-value">
+								250 км/ч
+							</span>
+						</div>
+						<div class="column-information__item-info">
+							<span class="column-information__item-info-type">
+								Plaid
+							</span>
+							<span class="column-information__item-info-value">
+								262 км/ч
+							</span>
+						</div>
+					</div>
+
+					<div class="column-information__item">
+						<div class="column-information__item-title">
+							<h3>Привод</h3>
+						</div>
+						<div class="column-information__item-info">
+							<span class="column-information__item-info-type">
+								Long Range
+							</span>
+							<span class="column-information__item-info-value">
+								Полный
+							</span>
+						</div>
+						<div class="column-information__item-info">
+							<span class="column-information__item-info-type">
+								Plaid
+							</span>
+							<span class="column-information__item-info-value">
+								Полный
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="specification-all">
+			<div class="specification-all__title">
+				<h3>Для всех Model X</h3>
+			</div>
+			<div class="specification-all__options">
+				<p>Самое большое в мире панорамное лобовое стекло из тонированного стекла с защитой от ультрафиолетовых
+					и инфракрасных лучей</p>
+				<p>Салонный HEPA-фильтр</p>
+				<p>Подогрев лобового стекла, руля, передних и задних сидений</p>
+				<p>Вентилируемые сидения водителя и пассажира</p>
+				<p>Трехзонный климат-контроль</p>
+				<p>Атермальная покрытие и УФ-защита на переднем, боковых и задних стеклах</p>
+				<p>Боковые зеркала с автоматическим затемнением, электроприводом складывания и подогревом</p>
+				<p>Обширное грузовое пространство, включая безопасный передний багажник</p>
+				<p>Пользовательские профили водителя</p>
+			</div>
+
+			<div class="specification-all__options">
+				<p>Премиальная аудио система с 22 динамиками, 1 сабвуфером, 2 усилителями и эффектом “погружения”</p>
+				<p>17" центральный дисплей, 12,3" дисплей водителя и 8" дисплей для задних пассажиров</p>
+				</p>
+				<p>Музыка и мультимедиа через Bluetooth®</p>
+				<p>Центральная консоль с отделением для хранения, портами USB-C и быстрой беспроводной зарядкой для 4
+					смартфонов</p>
+				<p>Игровой компьютер с вычислительной мощностью 10 терафлопс (сопоставимо с PlayStation 5)</p>
+				<p>Порт USB-A в перчаточном ящике с портативным накопителем на 128 Гб в комплекте</p>
+				<p>Визуализация дорожного движения в реальном времени</p>
+				<p>Карты со спутниковым обзором
+				</p>
+				<p>Потоковое видео, обеспечивающее доступ к контенту Netflix, Hulu, Youtube, Twitch и др.</p>
+				<p>Интернет-браузер</p>
+				<p>Караоке</p>
+			</div>
+
+			<div class="specification-all__options">
+				<p>Автоматическое экстренное торможение</p>
+				<p>Контроль слепых зон</p>
+				<p>Предупреждение о фронтальном столкновении
+				</p>
+				<p>Предупреждение о боковом столкновении
+				</p>
+				<p>Аварийное предотвращение и коррекция схода с полосы движения
+				</p>
+				<p>Ускорение с учетом препятствий</p>
+				<p>Светодиодные дневные ходовые огни</p>
+				<p>Режим Sentry: запись со всех камер в режиме “парковки”</p>
+				<p>Защита от перегрева кабины</p>
+				<p>Мониторинг местоположения автомобиля в приложении</p>
+			</div>
+		</div>
+	</section>
+
 </main>
 <footer class="footer">
 	<div class="footer__row _container">
+		<nav class="footer__models-menu menu-models">
+			<div class="menu-models__title">
+				Модели
+			</div>
+			<ul class="menu-models__list">
+				<li class="menu-models__item">
+					<a href="model-s.html" class="menu-models__link">
+						Model S
+					</a>
+				</li>
+				<li class="menu-models__item">
+					<a href="model-3.html" class="menu-models__link">
+						Model 3
+					</a>
+				</li>
+				<li class="menu-models__item">
+					<a href="model-x.html" class="menu-models__link">
+						Model X
+					</a>
+				</li>
+				<li class="menu-models__item">
+					<a href="model-y.html" class="menu-models__link">
+						Model Y
+					</a>
+				</li>
+				<li class="menu-models__item">
+					<a href="#" class="menu-models__link">
+						Model C
+					</a>
+				</li>
+				<li class="menu-models__item">
+					<a href="#" class="menu-models__link">
+						Model A
+					</a>
+				</li>
+				<li class="menu-models__item">
+					<a href="#" class="menu-models__link">
+						Model R
+					</a>
+				</li>
+				<li class="menu-models__item">
+					<a href="#" class="menu-models__link">
+						Model S
+					</a>
+				</li>
+			</ul>
+		</nav>
 		<div class="footer__contacts">
 			<div class="footer__contacts-title">
 				Контакты
@@ -81,15 +763,17 @@
 			<a class="footer__contacts-link" href="tel:+79999999999">+7 (999) 999-99-99</a>
 			<a class="footer__contacts-link" href="mailto:example@gmail.com">example@gmail.com</a>
 		</div>
+	</div>
+	<div class="footer__row _container">
 		<div class="footer__copyright">Все права защищены (с) 2021</div>
 	</div>
-	
+
 </footer>
 
 <div class="body-overlay"></div>
 </div>
 <script src="js/app.min.js"></script>
-
+<script src="js/moduls-jquery.js"></script>
 </body>
 
 </html>

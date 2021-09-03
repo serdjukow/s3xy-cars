@@ -36,6 +36,7 @@
 		"webpack-stream": "^6.1.2"
 	},
 	"dependencies": {
+		"jquery": "^3.6.0",
 		"js-tabs": "^1.0.1",
 		"micromodal": "^0.4.6",
 		"swiper": "^6.8.0"
