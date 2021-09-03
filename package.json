@@ -1,9 +1,9 @@
 {
-	"name": "optimizedhtml",
-	"version": "5.0.0",
-	"description": "OptimizedHTML 5 - Lightweight Gulp Starter",
+	"name": "s3xy-cars",
+	"version": "1.0.0",
+	"description": "Sexy Cars",
 	"main": "index.js",
-	"author": "",
+	"author": "Sergej S",
 	"license": "ISC",
 	"scripts": {
 		"start": "gulp",
