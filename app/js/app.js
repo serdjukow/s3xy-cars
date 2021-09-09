@@ -110,4 +110,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	bodyOverlay.addEventListener('click', () => {
 		toggleNavActive()
 	})
+
 })

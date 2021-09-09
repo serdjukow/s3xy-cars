@@ -264,7 +264,6 @@ let _slideDown = (target, duration = 500) => {
 	let display = window.getComputedStyle(target).display;
 	if (display === 'none')
 		display = 'block';
-
 	target.style.display = display;
 	let height = target.offsetHeight;
 	target.style.overflow = 'hidden';
