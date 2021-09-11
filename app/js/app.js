@@ -92,6 +92,45 @@ document.addEventListener('DOMContentLoaded', () => {
 		},
 	});
 
+	// configuratorSlider
+	const configuratorSlider = new Swiper(".configurator-slider", {
+		loop: true,
+		spaceBetween: 20,
+		slidesPerView: 1,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		breakpoints: {
+			"@0.00": {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			"@0.75": {
+				slidesPerView: 1,
+				spaceBetween: 10,
+			},
+			"@1.00": {
+				slidesPerView: 1,
+				spaceBetween: 20,
+			},
+			"@1.50": {
+				slidesPerView: 1,
+				spaceBetween: 20,
+			}
+		},
+		on: {
+			init: function () {
+
+			},
+			imagesReady: function () {
+
+			}
+		}
+	});
+
 	const menuButton = document.querySelector('#nav-icon')
 	const navigationTop = document.querySelector('.navigation')
 	const body = document.querySelector('body')
@@ -111,4 +150,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		toggleNavActive()
 	})
 
+	const configurator = document.querySelector('.configurator')
+	const configuratorButton = document.querySelector('#configurator-button')
+	const configuratorButtonClose = document.querySelector('#configurator-button-close')
+
+	configuratorButton.addEventListener('click', () => {
+		configurator.classList.add('_active')
+		body.classList.add('_lock')
+	})
+	configuratorButtonClose.addEventListener('click', () => {
+		if (configurator.classList.contains('_active')) {
+			configurator.classList.remove('_active')
+			body.classList.remove('_lock')
+		}
+	})
 })

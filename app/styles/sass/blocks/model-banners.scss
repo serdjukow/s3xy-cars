@@ -83,9 +83,15 @@
 		border-radius: 60px;
 		transition: background-color 0.3s ease-in-out;
 		user-select: none;
+		&:focus,
+		&:active {
+			color: rgba(#fff, .5);
+			
+		}
+
 		&::before {
 			content: "";
-			display: banner;
+			display: block;
 			width: 30px;
 			height: 30px;
 			background-color: #fff;

@@ -29,7 +29,7 @@ function browsersync() {
 		ghostMode: { clicks: false },
 		notify: false,
 		online: true,
-		//tunnel: true //'https://sefsfsesef.loca.lt', // Attempt to use the URL https://yousutename.loca.lt
+		tunnel: true //'https://sefsfsesef.loca.lt', // Attempt to use the URL https://yousutename.loca.lt
 	})
 }
 
