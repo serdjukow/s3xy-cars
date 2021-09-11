@@ -6,10 +6,12 @@
 	bottom: 0;
 	z-index: 2;
 	background-color: #fff;
+	visibility: hidden;
 	transition: left 0.3s ease-in-out;
 
 	&._active {
 		left: 0;
+		visibility: visible;
 	}
 
 	// .configurator__row
