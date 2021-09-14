@@ -108,25 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
 				slidesPerView: 1,
 				spaceBetween: 10,
 			},
-			"@0.75": {
-				slidesPerView: 1,
-				spaceBetween: 10,
-			},
-			"@1.00": {
-				slidesPerView: 1,
-				spaceBetween: 20,
-			},
 			"@1.50": {
 				slidesPerView: 1,
 				spaceBetween: 20,
-			}
-		},
-		on: {
-			init: function () {
-
-			},
-			imagesReady: function () {
-
 			}
 		}
 	});

@@ -6,12 +6,11 @@
 	bottom: 0;
 	z-index: 2;
 	background-color: #fff;
-	visibility: hidden;
 	transition: left 0.3s ease-in-out;
 
 	&._active {
 		left: 0;
-		visibility: visible;
+		transition: left 0.3s ease-in-out;
 	}
 
 	// .configurator__row
@@ -22,9 +21,10 @@
 		margin: 0 auto;
 		padding-left: 10px;
 		padding-right: 10px;
-		padding-top: 50px;
-		padding-bottom: 40px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 		height: 100%;
+		width: 100%;
 		overflow-y: auto;
 	}
 
@@ -32,31 +32,35 @@
 
 	&__columns {
 		display: flex;
-		flex-wrap: wrap;
-		column-gap: 50px;
-		row-gap: 40px;
-		@include media-breakpoint-down(md) {
-
+		@include media-breakpoint-down(lg) {
+			flex-direction: column;
 		}
 	}
 
 	// .configurator__columns-left
 
 	&__columns-left {
-		width: 100%;
-		max-width: 900px;
-		@include adaptiv-value("padding-top", 40, 20, 1);
+		max-width: 750px;
+		margin-right: 30px;
+		padding-top: 10px;
+		@include media-breakpoint-down(lg) {
+			max-width: 100%;
+			margin-right: 10px;
+			margin-bottom: 40px;
+		}
 	}
 
 	// .configurator__columns-right
 	&__columns-right {
-		flex: 1 1 270px;
-		
+		flex: 1 0 250px;
 		row-gap: 20px;
 		padding: 0 5px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		@include media-breakpoint-down(lg) {
+			flex: 1 1 auto;
+		}
 	}
 
 	// .configurator__title-container
@@ -119,8 +123,7 @@
 		width: 100%;
 		min-height: 30px;
 		padding-top: 4px;
-		column-gap: 25px;
-		row-gap: 15px;
+		margin-bottom: -15px;
 	}
 
 	// .configurator__color
@@ -131,6 +134,7 @@
 		width: 25px;
 		height: 25px;
 		cursor: pointer;
+		margin-bottom: 15px;
 		transition: opacity 0.3s ease-in-out;
 		img {
 			display: block;
@@ -141,6 +145,9 @@
 			&:hover {
 				opacity: 0.5;
 			}
+		}
+		&:not(:last-child) {
+			margin-right: 20px;
 		}
 	}
 
@@ -157,6 +164,7 @@
 		@include adaptiv-value("font-size", 30, 20, 1);
 		@include adaptiv-value("line-height", 36, 24, 1);
 		margin-bottom: 20px;
+		display: flex;
 	}
 
 	// .configurator__info-options
@@ -175,15 +183,19 @@
 		& > *:not(:last-child) {
 			margin-bottom: 10px;
 		}
-		span {
+		p {
 			display: block;
+			font-size: 15px;
+			line-height: 150%;
 		}
 	}
 
 	// .configurator__info-equipment-title
 
-	&__info-equipment-title {
+	h5 {
 		font-weight: 500;
+		font-size: 15px;
+		line-height: 150%;
 	}
 
 	// .configurator____button-close
@@ -214,8 +226,7 @@
 .progress-bar {
 	flex: 0 0 auto;
 	position: relative;
-	margin-bottom: 20px;
-	padding-bottom: 20px;
+	margin-bottom: 10px;
 	margin-right: 10px;
 	overflow-x: auto;
 	width: 100%;
@@ -244,15 +255,13 @@
 		text-align: center;
 		list-style: none;
 		margin: 0;
-		padding: 0;
+		padding: 20px 0 25px 0;
 		overflow: hidden;
 		box-sizing: border-box;
 		span {
 			display: block;
 		}
-		& > *:not(:last-child) {
-			margin-bottom: 9px;
-		}
+
 		&._active {
 			.progress-bar__title {
 				font-weight: 500;
@@ -284,7 +293,7 @@
 		&::before,
 		&::after {
 			position: absolute;
-			top: 31%;
+			top: 46%;
 			content: "";
 			display: block;
 			width: 45%;
@@ -321,7 +330,7 @@
 			align-items: flex-start;
 			&::before {
 				right: 0;
-				width: 85%;
+				width: 82%;
 				height: 2px;
 			}
 			&::after {
@@ -335,7 +344,7 @@
 			align-items: flex-end;
 			&::before {
 				left: 0;
-				width: 76%;
+				width: 74%;
 				height: 2px;
 				background-color: rgba($textcolor, 0.3);
 			}
@@ -360,6 +369,8 @@
 		border: 1px solid rgba($textcolor, 0.5);
 		border-radius: 50%;
 		background: #fff;
+		margin-top: 10px;
+		margin-bottom: 10px;
 		z-index: 1;
 		&::before {
 			position: absolute;
@@ -396,9 +407,11 @@
 	// .progress-bar__prepaid
 
 	&__prepaid {
+		position: absolute;
+		top: 85px;
 		font-weight: 500;
 		font-size: 12px;
-		line-height: 150.02%;
+		line-height: 100%;
 		background: rgba($textcolor, 0.6);
 		border-radius: 3px;
 		color: #fff;
@@ -407,7 +420,6 @@
 }
 
 .configurator {
-
 	&__slider {
 		position: relative;
 		padding: 0 40px;
@@ -423,12 +435,16 @@
 		user-select: none;
 		position: relative;
 		cursor: grab;
-
+		padding-bottom: 39.58904109589041%;
 		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			object-fit: cover;
 			display: block;
 			width: 100%;
 		}
-
 	}
 
 	.swiper-container {

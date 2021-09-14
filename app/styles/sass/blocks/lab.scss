@@ -221,7 +221,7 @@
 	// .sensors-details__content
 
 	&__content {
-		max-width: 560px;
+		max-width: 460px;
 		padding: 10px 0;
 	}
 
@@ -392,6 +392,8 @@
 	&__card {
 		display: flex;
 		padding-top: 30px;
+		max-width: 1380px;
+		margin: 0 auto;
 
 		&:nth-child(1) {
 			flex-direction: column;
@@ -430,7 +432,7 @@
 				}
 				.banner-autopilot__card-info {
 					text-align: start;
-					@include adaptiv-value("padding", 40, 10, 1);
+					@include adaptiv-value("padding", 20, 10, 1);
 				}
 				@include media-breakpoint-down(md) {
 					flex-direction: column;
@@ -441,6 +443,7 @@
 				@include media-breakpoint-down(md) {
 					flex-direction: column;
 				}
+				margin-bottom: 20px;
 			}
 		}
 	}
@@ -449,10 +452,13 @@
 
 	&__card-bg {
 		flex: 1 1 50%;
-		padding-bottom: 50%;
+		padding-bottom: 30%;
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
+		@include media-breakpoint-down(md) {
+			padding-bottom: 50%;
+		}
 	}
 
 	&__card-info-container {
@@ -471,7 +477,7 @@
 		align-items: center;
 		justify-content: center;
 		text-align: start;
-		@include adaptiv-value("padding", 40, 10, 1);
+		@include adaptiv-value("padding", 20, 10, 1);
 		h4 {
 			font-weight: 500;
 			@include adaptiv-value("font-size", 30, 20, 1);
