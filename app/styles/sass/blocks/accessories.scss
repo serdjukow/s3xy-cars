@@ -83,11 +83,29 @@
 		&._active {
 			background-color: $textcolor;
 			color: #fff;
+			a {
+				color: #fff;
+				transition: 0.3s ease-in-out;
+			}
 		}
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: lighten($color: $textcolor, $amount: 30%);
 				color: #fff;
+				a {
+					color: #fff;
+				}
+			}
+		}
+		a {
+			text-decoration: none;
+			color: #393939;
+			display: block;
+			transition: 0.3s ease-in-out;
+			@media (any-hover: hover) {
+				&:hover {
+					color: #fff;
+				}
 			}
 		}
 	}

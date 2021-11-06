@@ -9,17 +9,18 @@
 	&__item {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-		@include adaptiv-value("margin-bottom", 20, 15, 1);
-		@include adaptiv-value("column-gap", 20, 15, 1);
-		@include adaptiv-value("row-gap", 70, 20, 1);
-		@include media-breakpoint-down(lg) {
+		@include adaptiv-value('margin-bottom', 20, 15, 1);
+		@include adaptiv-value('column-gap', 20, 15, 1);
+		@include adaptiv-value('row-gap', 70, 20, 1);
+		@include media-breakpoint-down(sm) {
+			grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
 		}
 		&:nth-child(2) {
 			.about-us__subtitle-photo {
 				padding-top: 75%;
 				order: -1;
 				@include media-breakpoint-down(md) {
-					@include adaptiv-value("row-gap", 70, 20, 1);
+					@include adaptiv-value('row-gap', 70, 20, 1);
 					order: 0;
 				}
 			}
@@ -38,7 +39,7 @@
 		background-position: center center;
 		align-self: baseline;
 		&::before {
-			content: "";
+			content: '';
 			display: block;
 			position: absolute;
 			top: 0;

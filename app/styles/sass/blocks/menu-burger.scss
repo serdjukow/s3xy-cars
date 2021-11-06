@@ -44,12 +44,6 @@
 
 #nav-icon span:nth-child(3) {
 	left: 0;
-	@media (any-hover: hover) {
-		left: 15px;
-		&:hover {
-			left: 0;
-		}
-	}
 }
 
 #nav-icon span:nth-child(5),

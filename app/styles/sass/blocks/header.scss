@@ -18,6 +18,17 @@
 		padding: 0 3px 0px;
 		z-index: 100;
 	}
+
+	@include media-breakpoint-down(xl) {
+		.header-top__contact-links {
+			display: none;
+		}
+	}
+}
+.menu {
+	.header-top__contact-links {
+		display: flex;
+	}
 }
 
 .header-top {
@@ -31,6 +42,7 @@
 		text-decoration: none;
 		color: $textcolor;
 		transition: all 0.3s ease-in-out;
+
 		@media (any-hover: hover) {
 			&:hover {
 				color: $textcolor;
@@ -128,6 +140,11 @@
 				border-bottom: 2px solid lighten($textcolor, 40%);
 				a {
 					color: lighten($textcolor, 40%);
+					@media (any-hover: hover) {
+						&:hover {
+							color: lighten($textcolor, 40%);
+						}
+					}
 				}
 			}
 		}
@@ -174,7 +191,7 @@
 			.menu {
 				display: flex;
 				flex-direction: column;
-				align-items: flex-start;				
+				align-items: flex-start;
 			}
 
 			// .navigation__li

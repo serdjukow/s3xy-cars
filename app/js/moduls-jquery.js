@@ -17,7 +17,7 @@ $r(document).ready(function () {
 			}
 		});
 	});
-	$r(document).on('click', '.modal__close, .modal__overlay', function () {
+	$r(document).on('click', ".modal__close", function () {
 		$r('#newsBox').empty();
 	});
 
@@ -43,6 +43,8 @@ $r(document).ready(function () {
 			}
 		});
 	});
+
+
 
 	// Accessories Slider
 
