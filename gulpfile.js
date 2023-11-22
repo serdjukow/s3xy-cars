@@ -11,7 +11,7 @@ const sassglob = require('gulp-sass-glob')
 const less = require('gulp-less')
 const lessglob = require('gulp-less-glob')
 const styl = require('gulp-stylus')
-const stylglob = require("gulp-noop")
+const stylglob = require('gulp-noop')
 const cleancss = require('gulp-clean-css')
 const autoprefixer = require('gulp-autoprefixer')
 const rename = require('gulp-rename')
@@ -24,7 +24,7 @@ function browsersync() {
 	browserSync.init({
 		server: {
 			baseDir: 'app/',
-			middleware: bssi({ baseDir: 'app/', ext: '.html' })
+			middleware: bssi({ baseDir: 'app/', ext: '.html' }),
 		},
 		ghostMode: { clicks: false },
 		notify: false,
@@ -35,23 +35,26 @@ function browsersync() {
 
 function scripts() {
 	return src(['app/js/*.js', '!app/js/*.min.js'])
-		.pipe(webpack({
-			mode: 'production',
-			performance: { hints: false },
-			module: {
-				rules: [
-					{
-						test: /\.(js)$/,
-						exclude: /(node_modules)/,
-						loader: 'babel-loader',
-						query: {
-							presets: ['@babel/env'],
-							plugins: ['babel-plugin-root-import']
-						}
-					}
-				]
-			}
-		})).on('error', function handleError() {
+		.pipe(
+			webpack({
+				mode: 'production',
+				performance: { hints: false },
+				module: {
+					rules: [
+						{
+							test: /\.(js)$/,
+							exclude: /(node_modules)/,
+							loader: 'babel-loader',
+							query: {
+								presets: ['@babel/env'],
+								plugins: ['babel-plugin-root-import'],
+							},
+						},
+					],
+				},
+			})
+		)
+		.on('error', function handleError() {
 			this.emit('end')
 		})
 		.pipe(rename('app.min.js'))
@@ -63,29 +66,19 @@ function styles() {
 	return src([`app/styles/${preprocessor}/*.*`, `!app/styles/${preprocessor}/_*.*`])
 		.pipe(eval(`${preprocessor}glob`)())
 		.pipe(eval(preprocessor)())
-		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-		.pipe(cleancss({ level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
-		.pipe(rename({ suffix: ".min" }))
+		.pipe(autoprefixer({ overrideBrowserslist: ['last 2 versions'], grid: false }))
+		.pipe(cleancss({ level: { 1: { specialComments: 0 } } /* format: 'beautify' */ }))
+		.pipe(rename({ suffix: '.min' }))
 		.pipe(dest('app/css'))
 		.pipe(browserSync.stream())
 }
 
 function images() {
-	return src(['app/images/src/**/*'])
-		.pipe(newer('app/images/dist'))
-		.pipe(imagemin())
-		.pipe(dest('app/images/dist'))
-		.pipe(browserSync.stream())
+	return src(['app/images/src/**/*']).pipe(newer('app/images/dist')).pipe(imagemin()).pipe(dest('app/images/dist')).pipe(browserSync.stream())
 }
 
 function buildcopy() {
-	return src([
-		'{app/js,app/css}/*.min.*',
-		'app/images/**/*.*',
-		'!app/images/src/**/*',
-		'app/fonts/**/*'
-	], { base: 'app/' })
-		.pipe(dest('dist'))
+	return src(['{app/js,app/css}/*.min.*', 'app/images/**/*.*', '!app/images/src/**/*', 'app/fonts/**/*'], { base: 'app/' }).pipe(dest('dist'))
 }
 
 async function buildhtml() {
@@ -99,19 +92,22 @@ function cleandist() {
 }
 
 function deploy() {
-	return src('dist/')
-		.pipe(rsync({
+	return src('dist/').pipe(
+		rsync({
 			root: 'dist/',
 			hostname: 'username@yousite.com',
 			destination: 'yousite/public_html/',
 			// clean: true, // Mirror copy with file deletion
-			include: [/* '*.htaccess' */], // Included files to deploy,
+			include: [
+				/* '*.htaccess' */
+			], // Included files to deploy,
 			exclude: ['**/Thumbs.db', '**/*.DS_Store'],
 			recursive: true,
 			archive: true,
 			silent: false,
-			compress: true
-		}))
+			compress: true,
+		})
+	)
 }
 
 function startwatch() {

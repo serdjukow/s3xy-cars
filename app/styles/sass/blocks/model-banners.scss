@@ -18,7 +18,7 @@
 	// .model-banner-top__title
 
 	&__title {
-		@include adaptiv-value("margin-top", 100, 70, 1);
+		@include adaptiv-value('margin-top', 100, 70, 1);
 		color: #fff;
 		text-align: center;
 		h2 {
@@ -27,7 +27,7 @@
 			line-height: 49px;
 			min-width: 170px;
 			margin-bottom: 0;
-			color: rgba(#fff, .75);
+			color: rgba(#fff, 0.75);
 		}
 		span {
 			font-weight: 300;
@@ -43,7 +43,7 @@
 		margin: 0 auto;
 		width: 100%;
 		max-width: 950px;
-		@include adaptiv-value("margin-bottom", 50, 15, 1);
+		@include adaptiv-value('margin-bottom', 50, 15, 1);
 		@include media-breakpoint-down(lg) {
 			flex-direction: column;
 		}
@@ -55,8 +55,8 @@
 		width: 100%;
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(65px, 1fr));
-		@include adaptiv-value("column-gap", 20, 5, 1);
-		@include adaptiv-value("row-gap", 20, 10, 1);
+		@include adaptiv-value('column-gap', 20, 5, 1);
+		@include adaptiv-value('row-gap', 20, 10, 1);
 		margin-right: 40px;
 		@include media-breakpoint-down(lg) {
 			margin-bottom: 30px;
@@ -71,28 +71,27 @@
 		font-weight: 500;
 		font-size: 14px;
 		line-height: 17px;
-		text-align: center;
 		letter-spacing: 0.04em;
 		text-transform: uppercase;
 		background-color: rgba($textcolor, 0.25);
 		color: #fff;
 		text-decoration: none;
-		min-width: 155px;
 		height: 40px;
 		display: flex;
 		align-items: center;
-		padding: 5px;
+		padding: 5px 20px 5px 5px;
 		border-radius: 60px;
 		transition: background-color 0.3s ease-in-out;
 		user-select: none;
+		white-space: nowrap;
 		&:focus,
 		&:active {
-			color: rgba(#fff, .5);
-			
-		}
+			color: rgba(#fff, 0.5);
+		}		
 
 		&::before {
-			content: "";
+			flex: 0 0 30px;
+			content: '';
 			display: block;
 			width: 30px;
 			height: 30px;
@@ -101,7 +100,7 @@
 			background-image: url(../images/dist/icons/button-arr.svg);
 			background-position: center center;
 			background-repeat: no-repeat;
-			margin-right: 16px;
+			margin-right: 10px;
 		}
 		@media (any-hover: hover) {
 			&:hover {
@@ -130,8 +129,8 @@
 		align-items: center;
 		justify-content: center;
 		font-weight: 500;
-		@include adaptiv-value("font-size", 30, 20, 1);
-		@include adaptiv-value("line-height", 36, 24, 1);
+		@include adaptiv-value('font-size', 30, 20, 1);
+		@include adaptiv-value('line-height', 36, 24, 1);
 		text-align: center;
 		letter-spacing: -0.02em;
 		color: #fff;
@@ -154,8 +153,8 @@
 		font-weight: 500;
 		font-size: 12px;
 		line-height: 17px;
-		@include adaptiv-value("font-size", 12, 8, 1);
-		@include adaptiv-value("line-height", 17, 14, 1);
+		@include adaptiv-value('font-size', 12, 8, 1);
+		@include adaptiv-value('line-height', 17, 14, 1);
 		text-align: center;
 		letter-spacing: 0.045em;
 		color: #fff;
@@ -200,10 +199,10 @@
 	&__items {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
-		@include adaptiv-value("column-gap", 20, 5, 1);
+		@include adaptiv-value('column-gap', 20, 5, 1);
 		max-width: 800px;
 		width: 100%;
-		@include adaptiv-value("margin-bottom", 28, 10, 1);
+		@include adaptiv-value('margin-bottom', 28, 10, 1);
 	}
 
 	&__items.horizontal {
@@ -212,7 +211,7 @@
 		position: relative;
 		align-self: center;
 		transform: translate(0, 0);
-		@include adaptiv-value("row-gap", 40, 10, 1);
+		@include adaptiv-value('row-gap', 40, 10, 1);
 		grid-template-columns: 1fr;
 		margin-bottom: 0;
 		max-width: 1400px;
@@ -253,8 +252,8 @@
 		display: flex;
 		padding-left: 10px;
 		padding-right: 10px;
-		@include adaptiv-value("padding-bottom", 30, 15, 1);
-		@include adaptiv-value("padding-top", 40, 10, 1);
+		@include adaptiv-value('padding-bottom', 30, 15, 1);
+		@include adaptiv-value('padding-top', 40, 10, 1);
 		max-width: 1240px;
 		margin: 0 auto;
 		@include media-breakpoint-down(md) {
@@ -269,7 +268,6 @@
 					text-align: center;
 				}
 			}
-			
 		}
 	}
 
@@ -280,8 +278,8 @@
 		padding-right: 15px;
 		h3 {
 			font-weight: 500;
-			@include adaptiv-value("font-size", 30, 20, 1);
-			@include adaptiv-value("line-height", 36, 24, 1);
+			@include adaptiv-value('font-size', 30, 20, 1);
+			@include adaptiv-value('line-height', 36, 24, 1);
 		}
 	}
 
@@ -305,7 +303,7 @@
 		margin-top: 20px;
 		padding-right: 5px;
 		padding-left: 5px;
-		@include adaptiv-value("margin-bottom", 70, 10, 1);
+		@include adaptiv-value('margin-bottom', 70, 10, 1);
 		.model-banner__title {
 			flex: 1 1 100%;
 			padding-right: 15px;
@@ -360,11 +358,11 @@
 	&__footer {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-		@include adaptiv-value("column-gap", 40, 10, 1);
-		@include adaptiv-value("row-gap", 20, 10, 1);
+		@include adaptiv-value('column-gap', 40, 10, 1);
+		@include adaptiv-value('row-gap', 20, 10, 1);
 		padding-right: 10px;
 		padding-left: 10px;
-		@include adaptiv-value("padding-bottom", 20, 10, 1);
+		@include adaptiv-value('padding-bottom', 20, 10, 1);
 		@include media-breakpoint-down(sm) {
 			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 		}
@@ -405,8 +403,8 @@
 
 			&__title {
 				font-weight: 500;
-				@include adaptiv-value("font-size", 20, 17, 1);
-				@include adaptiv-value("line-height", 24, 29, 1);
+				@include adaptiv-value('font-size', 20, 17, 1);
+				@include adaptiv-value('line-height', 24, 29, 1);
 				text-align: start;
 				justify-content: flex-start;
 				max-width: 450px;
@@ -420,8 +418,8 @@
 			&__info {
 				font-size: 12px;
 				line-height: 14px;
-				@include adaptiv-value("font-size", 12, 10, 1);
-				@include adaptiv-value("line-height", 14, 11, 1);
+				@include adaptiv-value('font-size', 12, 10, 1);
+				@include adaptiv-value('line-height', 14, 11, 1);
 				letter-spacing: 0.045em;
 				text-align: start;
 				justify-content: start;
@@ -528,7 +526,7 @@
 			margin-top: -10px;
 		}
 		&::before {
-			content: "";
+			content: '';
 			display: block;
 			width: 12px;
 			height: 12px;
@@ -540,7 +538,7 @@
 			left: -4px;
 		}
 		&::after {
-			content: "";
+			content: '';
 			display: block;
 			position: absolute;
 			top: 0;

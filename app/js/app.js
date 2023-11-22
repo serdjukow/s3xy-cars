@@ -112,19 +112,28 @@ document.addEventListener('DOMContentLoaded', () => {
 	const body = document.querySelector('body')
 	const bodyOverlay = document.querySelector('.body-overlay')
 
+	document.addEventListener('click', event => {
+		if (event.target.closest('.menu-item') && window.innerWidth < 1199.98) {
+			toggleNavActive()
+		}
+		if (event.target.closest('#nav-icon') && window.innerWidth < 1199.98) {
+			toggleNavActive()
+		}
+		if (event.target.closest('.body-overlay' && window.innerWidth < 1199.98)) {
+			toggleNavActive()
+		}
+		else if (window.innerWidth > 1199.98) {
+			bodyOverlay.classList.remove('_active')
+		}
+	})
+
 	const toggleNavActive = () => {
 		menuButton.classList.toggle('_active')
 		navigationTop.classList.toggle('_active')
 		body.classList.toggle('_lock')
 		bodyOverlay.classList.toggle('_active')
 	}
-	menuButton.addEventListener('click', () => {
-		toggleNavActive()
-	})
 
-	bodyOverlay.addEventListener('click', () => {
-		toggleNavActive()
-	})
 
 	const configurator = document.querySelector('.configurator')
 	const configuratorButton = document.querySelector('#configurator-button')
@@ -142,5 +151,14 @@ document.addEventListener('DOMContentLoaded', () => {
 				configurator.classList.remove('_active')
 			}
 		})
+	}
+
+	// padding-right для ссылок на IOS
+	const user = detect.parse(navigator.userAgent)
+	const headerTopContactLinks = document.querySelector('.header-top__contact-links')
+	if (window.innerWidth > 1199.98) {
+		if (user.os.family === 'iOS' && document.body.offsetHeight > window.innerHeight) {
+			headerTopContactLinks.style.paddingRight = 17 + 'px'
+		}
 	}
 })

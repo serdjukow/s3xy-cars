@@ -9,6 +9,11 @@
 		"start": "gulp",
 		"build": "gulp build"
 	},
+	"browserslist": [
+		"last 2 versions",
+		"not ie <= 12",
+		"not ie_mob <= 12"
+	],
 	"devDependencies": {
 		"@babel/core": "^7.14.8",
 		"@babel/preset-env": "^7.14.8",

@@ -255,6 +255,7 @@
 		position: relative;
 		padding: 50%;
 		min-height: 450px;
+		overflow: hidden;
 		@include adaptiv-value("padding-top", 64, 20, 1);
 		img {
 			position: absolute;
